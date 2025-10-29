@@ -1,0 +1,35 @@
+# Python cache and compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pkl
+*.pt
+*.ckpt
+
+# Notebook checkpoints
+.ipynb_checkpoints/
+
+# Logs and runs
+runs/
+wandb/
+logs/
+*.log
+
+# Model outputs and fine-tuned models
+models/
+ft_models/
+in_silico_result/
+in_silico_FT_model/
+
+# Results and data
+results/
+result/
+datasets/
+data/
+*.h5ad
+*.hdf5
+*.csv
+*.tsv
+
+# Temporary / misc
+.DS_Store
