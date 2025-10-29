@@ -33,3 +33,10 @@ data/
 
 # Temporary / misc
 .DS_Store
+
+# 全てのノードブックを無視
+*.ipynb
+
+# 例外:以下のノートブックは追跡
+!cell_classification.ipynb
+!in_silico_perturbation.ipynb
