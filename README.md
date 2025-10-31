@@ -1,5 +1,9 @@
 # Mix-Geneformer
-
+まず，環境構築のために`requirements.txt`をインストールしてください．
+各々の環境によってエラーが出ると思うので，出たら都度追加していってください．Dockerfileもアップロードしているので必要に応じて使用してください．
+```
+pip install -r requirements.txt
+```
 # 事前学習と追加学習とファインチューニング
 geneformer/tokenizer.pyのTOKEN_DICTIONARY_FILEのパスを使用するトークナイザのものに変更してください．
 ```
