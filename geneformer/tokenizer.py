@@ -44,14 +44,14 @@ logger = logging.getLogger(__name__)
 # setting 
 ORGANISM = "mouse"
 MH_FLAG = False
-USE_GPU = "cuda:7"
+USE_GPU = "cuda:0"
 
 GENE_MEDIAN_FILE = "/mnt/keita/data/scRNA-datas/mouse_data/mouse-genecorpus-20M/data1/tokens/gene_median_dictionary_0-3000_0-001.pkl" # 指定しているだけで使っていない
 
 if ORGANISM == "human" :
     TOKEN_DICTIONARY_FILE = "/mnt/keita/data/scRNA-datas/human_data/Geneformer/genecorpus-30M/token_dictionary_v3.pkl"
 elif ORGANISM == "mouse" :
-    TOKEN_DICTIONARY_FILE = "/work/mouse-geneformer/dictionary_pickle/MLM-re_token_dictionary_v3.pkl"
+    TOKEN_DICTIONARY_FILE = "/work/mouse-Geneformer++/mix_token_dictionary_v3.pkl"
 else :
     print("in tokenizer.py: Not select ORGANISM (human or mouse)")
     sys.exit(1)

@@ -4,15 +4,15 @@ set -euo pipefail
 export CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6
 export TORCH_NCCL_ASYNC_ERROR_HANDLING=1
 
-RUN_ROOT=/work/mouse-Geneformer++/runs/20251023
+RUN_ROOT=/work/mouse-Geneformer++/runs/20251031
 mkdir -p "$RUN_ROOT"
 
 deepspeed --num_gpus=7 pretrain_geneformer_ortholog_dynamic.py \
   --run_dir "$RUN_ROOT" \
   --dataset_path /work/dataset/mix-genecorpus-50M-label \
-  --token_dictionary_path /work/mouse-geneformer/dictionary_pickle/mix_token_dictionary_v3.pkl \
-  --correspondence_tsv /work/mouse-geneformer/correspondence.tsv \
-  --pretext_task MLM-SimCSE \
+  --token_dictionary_path /work/mouse-Geneformer++/mix_token_dictionary_v3.pkl \
+  --correspondence_tsv /work/mouse-Geneformer++/correspondence.tsv \
+  --pretext_task MLM \
   --xspec_enable \
   --xspec_rate 1.0 \
   --lambda_xspec 0.5 \
